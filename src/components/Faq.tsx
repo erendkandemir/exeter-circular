@@ -51,10 +51,10 @@ export function Faq() {
         <details>
           <summary>What will our membership certificate say?</summary>
           <p>
-            Your dated certificate will show your business name and state that
-            you are part of the Exeter Circular Business Network for
-            Sustainability. Members can display it alongside a window sticker to
-            show their involvement in the local network.
+            Your dated certificate will show your business name and the wording
+            “Proud member of Exeter Circular – Sustainable Business Network.”
+            Members can display it alongside a window sticker to show their
+            involvement in the local network.
           </p>
         </details>
         <details>
@@ -68,9 +68,9 @@ export function Faq() {
         <details>
           <summary>Is this run by the University or council?</summary>
           <p>
-            Exeter Circular Business Network is an independent, student-led
-            nonprofit initiative. University or council endorsement is not
-            implied.
+            Exeter Circular – Sustainable Business Network is an independent,
+            student-led nonprofit initiative. University or council endorsement
+            is not implied.
           </p>
         </details>
         <details>

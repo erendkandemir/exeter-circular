@@ -11,7 +11,7 @@ export function Footer() {
             <path d="M35 4v12H23"></path>
           </svg>
           <span>
-            exeter circular<small>BUSINESS NETWORK</small>
+            exeter circular<small>SUSTAINABLE BUSINESS NETWORK</small>
           </span>
         </a>
         <p>
@@ -26,7 +26,7 @@ export function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© 2026 Exeter Circular Business Network</span>
+        <span>© 2026 Exeter Circular – Sustainable Business Network</span>
         <span>Independent · Student-led · Exeter, Devon</span>
         <InfoButton id="privacy-link" info="privacy">
           Privacy &amp; participation

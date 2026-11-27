@@ -9,7 +9,7 @@ export interface EnquiryFields {
 
 export function makeEnquiryDraft(fields: EnquiryFields): string {
   return [
-    "Hello Exeter Circular Business Network,",
+    "Hello Exeter Circular – Sustainable Business Network,",
     "",
     "I would like to enquire about joining or supporting the network.",
     "",

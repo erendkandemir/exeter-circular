@@ -71,7 +71,7 @@ export function Membership() {
               <span>{network.membershipYear}</span>
             </div>
             <div className="cert-symbol">↻</div>
-            <div className="eyebrow">BUSINESS NETWORK</div>
+            <div className="eyebrow">SUSTAINABLE BUSINESS NETWORK</div>
             <h3>
               Founding
               <br />
@@ -79,12 +79,12 @@ export function Membership() {
             </h3>
             <div className="cert-business">Your business name</div>
             <p>
-              We are part of the
+              Proud member of
               <br />
               <strong>
-                Exeter Circular Business Network
+                Exeter Circular –
                 <br />
-                for Sustainability.
+                Sustainable Business Network
               </strong>
             </p>
             <div className="cert-rule"></div>

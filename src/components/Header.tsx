@@ -14,7 +14,7 @@ export function Header() {
             <path d="M35 4v12H23"></path>
           </svg>
           <span>
-            exeter circular<small>BUSINESS NETWORK</small>
+            exeter circular<small>SUSTAINABLE BUSINESS NETWORK</small>
           </span>
         </a>
         <nav aria-label="Main navigation">

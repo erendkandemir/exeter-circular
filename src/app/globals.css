@@ -1487,3 +1487,14 @@ form > .button {
 .logo-carousel {
   overscroll-behavior-inline: contain;
 }
+
+/* Keep the longer network descriptor readable in the brand lockup. */
+.brand small {
+  letter-spacing: 1.1px;
+}
+@media (max-width: 480px) {
+  .brand small {
+    font-size: 9px;
+    letter-spacing: 0.8px;
+  }
+}

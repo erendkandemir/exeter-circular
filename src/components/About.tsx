@@ -15,11 +15,11 @@ export function About() {
             useful second life with another local enterprise.
           </p>
           <p>
-            Exeter Circular Business Network is an independent nonprofit student
-            initiative connecting sustainability, enterprise and the
-            environment. We bring local businesses together to share resources
-            and put circular economy principles into practice: keeping useful
-            materials in use for longer.
+            Exeter Circular – Sustainable Business Network is an independent
+            nonprofit student initiative connecting sustainability, enterprise
+            and the environment. We bring local businesses together to share
+            resources and put circular economy principles into practice: keeping
+            useful materials in use for longer.
           </p>
           <p>
             Our aim is to make sustainable business practices easier to adopt

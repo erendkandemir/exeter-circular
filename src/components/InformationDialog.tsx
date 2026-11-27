@@ -27,7 +27,7 @@ export function InformationDialog({
           <>
             <p>
               Founding membership recognises a business’s place in the first
-              cohort of Exeter Circular Business Network.
+              cohort of Exeter Circular – Sustainable Business Network.
             </p>
             <h3>What the certificate recognises</h3>
             <p>
@@ -37,9 +37,9 @@ export function InformationDialog({
             </p>
             <h3>A shared commitment</h3>
             <p>
-              Your certificate will say that your business is part of the Exeter
-              Circular Business Network for Sustainability: a local community
-              helping useful resources stay in circulation.
+              Your certificate will say “Proud member of Exeter Circular –
+              Sustainable Business Network”: a local community helping useful
+              resources stay in circulation.
             </p>
             <p>
               The certificate shown on this website is a design preview. Actual
@@ -49,9 +49,9 @@ export function InformationDialog({
         ) : (
           <>
             <p>
-              Exeter Circular Business Network is an independent nonprofit
-              student initiative. Participation is voluntary. Membership is
-              completely free and will always be free.
+              Exeter Circular – Sustainable Business Network is an independent
+              nonprofit student initiative. Participation is voluntary.
+              Membership is completely free and will always be free.
             </p>
             <h3>Your enquiry</h3>
             <p>
