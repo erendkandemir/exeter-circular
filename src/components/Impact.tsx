@@ -6,41 +6,42 @@ export function Impact() {
       <div className="shell section">
         <div className="impact-top">
           <div>
-            <p className="eyebrow">SMALL ACTIONS. VISIBLE RESULTS.</p>
+            <p className="eyebrow">SUSTAINABILITY IN PRACTICE</p>
             <h2>
-              A network with
-              <br />
-              something to show.
+              Local action. <br /> Measurable progress.
             </h2>
           </div>
           <p>
-            We’ll share the practical outcomes of the network as it grows, with
-            a clear distinction between membership and completed activity.
+            We want to understand how resource sharing can support more
+            sustainable business practices. As the network grows, we’ll report
+            completed exchanges, resources reused and the commercial value of
+            local collaboration.
           </p>
         </div>
         <div className="impact-grid">
           <article>
             <span className="impact-icon">↻</span>
-            <h3>Resources reused</h3>
+            <h3>Resource efficiency</h3>
             <p>
-              Items and materials that actually reach another business, recorded
-              after handover.
+              Record the items and materials reused after handover, helping us
+              understand how businesses keep resources in circulation.
             </p>
           </article>
           <article>
             <span className="impact-icon">£</span>
-            <h3>Value for local businesses</h3>
+            <h3>The business case for sustainability</h3>
             <p>
-              Reported purchases avoided, alongside collection costs and the
-              effort involved.
+              Track reported purchases avoided alongside collection costs and
+              effort, exploring when sustainable choices also make commercial
+              sense.
             </p>
           </article>
           <article>
             <span className="impact-icon">◎</span>
-            <h3>Connections that continue</h3>
+            <h3>Sustainable habits that last</h3>
             <p>
-              Repeat exchanges and relationships that make local reuse part of
-              everyday business.
+              Look for repeat exchanges and lasting relationships that make
+              resource reuse part of everyday business decisions.
             </p>
           </article>
         </div>

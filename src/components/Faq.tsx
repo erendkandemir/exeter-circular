@@ -12,6 +12,17 @@ export function Faq() {
       </div>
       <div className="faqs">
         <details>
+          <summary>How does the network support sustainability?</summary>
+          <p>
+            We connect businesses so usable materials and equipment can find a
+            second life locally. Our aim is to support waste prevention,
+            resource efficiency and more sustainable purchasing decisions. We
+            will record completed exchanges and ask members what they reused and
+            whether a new purchase was avoided, so we can learn which approaches
+            work.
+          </p>
+        </details>
+        <details>
           <summary>Who can join?</summary>
           <p>
             Businesses based in Exeter or serving the local area that want to

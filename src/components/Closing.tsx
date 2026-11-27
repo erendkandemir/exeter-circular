@@ -4,13 +4,14 @@ export function Closing() {
   return (
     <section className="closing shell">
       <div>
-        <p className="eyebrow">LET’S KEEP EXETER CIRCULATING</p>
+        <p className="eyebrow">LET’S BUILD A MORE SUSTAINABLE EXETER</p>
         <h2>
-          Something spare?
-          <br />
-          Start a connection.
+          Make sustainability <br /> part of your business.
         </h2>
-        <p>Join a local network making more of what we already have.</p>
+        <p>
+          Join a free local network turning shared resources into practical
+          opportunities for more sustainable business.
+        </p>
       </div>
       <div className="closing-actions">
         <EnquiryButton className="button">

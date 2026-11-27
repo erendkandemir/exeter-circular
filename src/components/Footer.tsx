@@ -15,9 +15,9 @@ export function Footer() {
           </span>
         </a>
         <p>
-          A nonprofit student initiative.
+          A nonprofit student initiative for business sustainability.
           <br />
-          Local business. Less waste. More possibility.
+          Local enterprise. Resource reuse. Shared purpose.
         </p>
         <div>
           <a href="#how-it-works">How it works</a>

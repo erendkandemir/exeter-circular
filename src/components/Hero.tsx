@@ -5,19 +5,20 @@ export function Hero() {
     <section className="hero shell">
       <div className="herocopy">
         <span className="eyebrow">
-          <span className="mini-loop">↻</span> A NONPROFIT STUDENT INITIATIVE
+          <span className="mini-loop">↻</span> A STUDENT INITIATIVE FOR BUSINESS
+          SUSTAINABILITY
         </span>
         <h1>
           Local business.
           <br />
           Less waste.
           <br />
-          <span>More possibility.</span>
+          <span>More sustainable.</span>
         </h1>
         <p>
-          Connecting Exeter businesses to give surplus materials and equipment a
-          second life. Good things happen when we make more of what’s already
-          here.
+          A nonprofit student initiative helping Exeter businesses put
+          sustainability into practice. Share surplus resources, reduce waste
+          and explore more sustainable ways of doing business.
         </p>
         <p className="free-promise">Completely free. Now and always.</p>
         <div className="actions">

@@ -23,7 +23,9 @@ export function MemberDirectory() {
     <section className="shell section" id="members">
       <div className="section-heading">
         <div>
-          <p className="eyebrow">THE PEOPLE BEHIND THE CIRCLE</p>
+          <p className="eyebrow">
+            LOCAL BUSINESSES. SHARED SUSTAINABILITY GOALS.
+          </p>
           <h2>
             Independent businesses.
             <br />
@@ -31,8 +33,9 @@ export function MemberDirectory() {
           </h2>
         </div>
         <p>
-          Our founding network is taking shape. Join early and help build a
-          community that works for Exeter.
+          Our founding network is taking shape. Help build a community of Exeter
+          businesses working towards practical sustainability through local
+          resource sharing.
         </p>
       </div>
       {members.length > 0 ? (

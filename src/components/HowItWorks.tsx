@@ -4,7 +4,7 @@ export function HowItWorks() {
       <div className="shell section">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">SIMPLE BY DESIGN</p>
+            <p className="eyebrow">PRACTICAL STEPS TOWARDS SUSTAINABILITY</p>
             <h2>
               A network you can
               <br />
@@ -12,8 +12,9 @@ export function HowItWorks() {
             </h2>
           </div>
           <p>
-            Our dedicated member communication channels make it easy to share
-            resources and connect with other local businesses.
+            Our dedicated member communication channels connect local businesses
+            and turn shared sustainability goals into practical resource
+            exchanges.
           </p>
         </div>
         <div className="how-grid">

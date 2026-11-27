@@ -6,21 +6,22 @@ export function Membership() {
     <section className="membership-section" id="membership">
       <div className="shell section membership-grid">
         <div>
-          <p className="eyebrow">FREE MEMBERSHIP. SHARED PURPOSE.</p>
+          <p className="eyebrow">
+            FREE MEMBERSHIP. SHARED SUSTAINABILITY GOALS.
+          </p>
           <h2>
-            Be part of Exeter’s
-            <br />
-            next circular chapter.
+            Be part of Exeter’s <br /> sustainable future.
           </h2>
           <p className="lead">
-            A local network your business can use, contribute to and be proud to
-            join.
+            Join a local business community making sustainability part of
+            everyday decisions through reuse, resource sharing and
+            collaboration.
           </p>
           <div className="benefits">
             <div>
               <span>✓</span>
               <p>
-                <strong>A practical exchange community</strong>
+                <strong>A practical sustainability community</strong>
                 <br />
                 Find useful resources and offer surplus through our member
                 communication channels.
@@ -47,8 +48,8 @@ export function Membership() {
               <p>
                 <strong>Stories worth sharing</strong>
                 <br />
-                Opportunities to feature your confirmed exchanges and local
-                collaborations.
+                Opportunities to share your confirmed reuse activities and the
+                practical steps your business takes towards sustainability.
               </p>
             </div>
           </div>
