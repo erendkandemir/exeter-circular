@@ -1,86 +1,114 @@
-# Exeter Circular Business Network — Vercel edition
+# Exeter Circular Business Network — Next.js / TSX
 
-This is the complete website, ready to deploy as a static site. It includes the latest copy: nonprofit student initiative, completely free membership now and always, member communication channels, enquiry-only joining, and the membership certificate preview.
+The same website, rebuilt with Next.js App Router, React and TypeScript. All page sections are real TSX components. React state controls the mobile menu, enquiry form, information dialogs and searchable member directory.
 
-## Deploy from your terminal
+## Open the code
 
-You need Node.js with npm/npx installed and a Vercel account.
+- `src/app/page.tsx` — assembles the homepage
+- `src/app/layout.tsx` — page metadata and root layout
+- `src/app/globals.css` — all styling and mobile layouts
+- `src/components/Hero.tsx` — homepage headline and free membership promise
+- `src/components/Membership.tsx` — membership benefits and certificate preview
+- `src/components/HowItWorks.tsx` — exchange process and example conversation
+- `src/components/MemberDirectory.tsx` — member cards, search and logo strip
+- `src/components/EnquiryDialog.tsx` — membership/general enquiry form
+- `src/components/Dialog.tsx` — accessible native dialog wrapper
+- `src/components/NetworkProvider.tsx` — shared React state for opening dialogs
+- `src/data/network.ts` — email, membership year, members and results
+- `src/lib/types.ts` — member/configuration TypeScript interfaces
+- `src/lib/enquiries.ts` — typed email draft and safe URL helpers
+- `public/members/` — approved business logo files
 
-1. Extract Exeter_Circular_Vercel.zip. Open Terminal in the extracted `exeter-circular` folder (the one containing `vercel.json`).
-2. Check Node and npm:
+## Requirements and local development
 
-   node -v
-   npm -v
+Use a supported Node.js LTS version, such as Node 22 or 24. The framework's minimum is Node 20.9.
 
-3. Sign in:
+```bash
+npm install
+npm run dev
+```
 
-   npx vercel@latest login
+Visit http://localhost:3000. Stop with Ctrl+C.
 
-   Follow the browser instructions and return to Terminal.
+```bash
+npm run typecheck
+npm run build
+npm start
+```
 
-4. Publish:
+The package includes a lockfile. Use `npm ci` for a reproducible clean installation.
 
-   npx vercel@latest --prod
+## Replace your existing HTML project safely
 
-   If prompted, approve installing the official Vercel CLI. Choose your Vercel account/team, create a new project, name it `exeter-circular-business-network`, and use `./` as the source directory. Keep the configuration provided in vercel.json. If asked to choose a framework, use Other. No build or install command is needed. Output directory is public.
+Keep the downloaded `exeter-circular-nextjs` folder separate from your existing `exeter-circular` folder. If both are in Downloads on your Mac:
 
-5. Open the production URL Vercel prints. Check the home page and membership enquiry flow.
+```bash
+node ~/Downloads/exeter-circular-nextjs/scripts/migrate.mjs ~/Downloads/exeter-circular
+cd ~/Downloads/exeter-circular
+npm install
+npm run dev
+```
 
-## Website files
+The migration requires the existing folder to contain `.git`. It backs up files before copying the new source, preserves the Git remote and any existing ignore rules, and retires only the old `public/index.html`, `public/app.js`, `public/style.css` and `public/content.json`. Backups are saved under `.migration-backups/` and ignored by Git. Existing additional public assets remain available. Do not copy or delete your `.git` folder.
 
-- public/index.html: page content and certificate preview
-- public/style.css: layout, branding and responsive styling
-- public/app.js: enquiry modal, FAQs, directory rendering and draft preparation
-- public/content.json: organiser email, approved members and confirmed exchange counts
-- public/icon.svg: browser icon
-- vercel.json: static-site deployment configuration
+If you have made your own changes, review the backups and merge those changes before publishing.
 
-## Enquiries
+Once you have checked the local site, stop the dev server and run:
 
-The email is exetercircular@gmail.com. The form prepares a message and provides an Open email draft link. Visitors review and send using their own email app. This is not a server-side form or database, and the website does not send email automatically. A direct email link is also available. No public group invitation is included.
+```bash
+git status
+git add .
+git commit -m "Convert website to Next.js and TypeScript"
+git push origin main
+```
 
-## Add confirmed member businesses
+## Vercel: change the old static build settings
 
-Edit public/content.json. Member businesses appear only when both confirmed and publishPermission are true. Logos appear only when logoPermission is also true. Count distinct businesses, not individual people. Do not add private contact details to this public file.
+Before pushing this migration, open the existing Vercel project's Settings > Build and Deployment. Change:
 
-Example structure (replace with a real consenting member; this example is not preloaded):
+- Framework Preset: **Next.js**
+- Root Directory: leave empty / repository root
+- Output Directory: **turn off the override**; do not leave it as `public`
+- Build Command: default (`npm run build`)
+- Install Command: default / `npm ci`
 
+The included `vercel.json` selects Next.js and the build/install commands. It no longer contains a static output directory. The next GitHub push triggers the Vercel deployment. After a successful deployment, open the production URL and test the enquiry dialog. There is no need for a new GitHub repository or Vercel project.
+
+For a new Vercel project, import this repository and use the Next.js preset with default settings.
+
+## Website behaviour retained
+
+- Independent nonprofit student initiative; completely free membership now and always.
+- Member communication channels are described without displaying any group invitation.
+- Email enquiries addressed to `exetercircular@gmail.com`.
+- Membership certificate preview with the wording “We are part of the Exeter Circular Business Network for Sustainability.”
+- Member counts, directory and logo strip appear when real approved member data is added.
+
+The enquiry form prepares an email draft. Visitors review and send it using their own email app; it does not automatically send emails or save submissions to a database. No backend, secrets or environment variables are required. The certificate is a visual preview; automated issuing is not included.
+
+## Add a confirmed member
+
+Edit the `members` array in `src/data/network.ts`. Example (replace with real approved details):
+
+```ts
 {
-  "name": "Business name",
-  "sector": "Retail",
-  "description": "A short approved business description.",
-  "membership": "Founding member",
-  "website": "https://example.com",
-  "confirmed": true,
-  "publishPermission": true,
-  "logo": "members/business-logo.png",
-  "logoPermission": true
+  id: "business-slug",
+  name: "Business name",
+  sector: "Retail",
+  description: "Approved description.",
+  membership: "Founding member",
+  website: "https://example.com",
+  logo: "/members/business-logo.png",
+  confirmed: true,
+  publishPermission: true,
+  logoPermission: true,
 }
+```
 
-Put approved logo files in public/members/. The website displays member counts, member cards and a horizontally scrollable logo strip when data is added. Only update confirmedExchanges with completed, recorded exchanges. The certificate is a visual preview; there is no automated certificate-issuing system.
+A member is listed only when both `confirmed` and `publishPermission` are true. Logos appear only with `logoPermission`. Do not put private contact information in this public configuration. Update `impact.confirmedExchanges` only with completed recorded exchanges. Commit and push to publish updates.
 
-## Publish changes later
+## References
 
-From this same folder run:
-
-   npx vercel@latest --prod
-
-Vercel keeps the project connection in the local .vercel folder after the first deployment.
-
-## Custom domain
-
-After deployment, open your project's Settings > Domains in Vercel. Add the domain you own and follow the DNS instructions Vercel supplies. Domain purchase and DNS changes are separate from this package.
-
-## Local preview
-
-Use a local HTTP server so content.json loads. If Python 3 is installed:
-
-   python3 -m http.server 8000 --directory public
-
-Then visit http://localhost:8000. Press Ctrl+C to stop.
-
-## Sources
-
-https://vercel.com/docs/cli/login
-https://vercel.com/docs/cli/deploy
+https://nextjs.org/docs/app/getting-started/installation
+https://nextjs.org/docs/app/getting-started/deploying
 https://vercel.com/docs/builds/configure-a-build
